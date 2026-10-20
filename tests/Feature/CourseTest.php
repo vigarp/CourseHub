@@ -71,3 +71,4 @@ class CourseTest extends TestCase
         $response->assertDontSee('Python untuk Data Science');
     }
 }
+
