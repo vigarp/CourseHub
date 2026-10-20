@@ -8,6 +8,7 @@ class Course extends Model
 {
     protected $fillable = [
         'title',
+        'slug',
         'instructor',
         'duration',
         'image',
@@ -15,6 +16,11 @@ class Course extends Model
         'category',
         'description',
     ];
+
+    public function getRouteKeyName(): string
+    {
+        return 'slug';
+    }
 
     public function getFormattedPriceAttribute(): string
     {

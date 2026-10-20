@@ -16,6 +16,7 @@ class CourseTest extends TestCase
 
         Course::create([
             'title' => 'Full Stack Web Development dengan Laravel 13',
+            'slug' => 'full-stack-web-development-laravel-13',
             'instructor' => 'Sandhika Galih',
             'duration' => '36 Jam (8 Minggu)',
             'image' => 'course-laravel.svg',
@@ -26,6 +27,7 @@ class CourseTest extends TestCase
 
         Course::create([
             'title' => 'Python untuk Data Science',
+            'slug' => 'python-untuk-data-science',
             'instructor' => 'Afif Efendi, M.Kom.',
             'duration' => '28 Jam (6 Minggu)',
             'image' => 'course-python.svg',
@@ -52,7 +54,8 @@ class CourseTest extends TestCase
     {
         $course = Course::first();
 
-        $response = $this->get('/courses/' . $course->id);
+        // Test access by slug
+        $response = $this->get('/courses/' . $course->slug);
 
         $response->assertStatus(200);
         $response->assertSee($course->title);
@@ -61,6 +64,10 @@ class CourseTest extends TestCase
         $response->assertSee($course->category);
         $response->assertSee('Rp 350.000');
         $response->assertSee($course->description);
+
+        // Test fallback access by id also works
+        $responseById = $this->get('/courses/' . $course->id);
+        $responseById->assertStatus(200);
     }
 
     public function test_filter_by_category_works(): void

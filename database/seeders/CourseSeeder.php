@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\Course;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Str;
 
 class CourseSeeder extends Seeder
 {
@@ -17,6 +18,7 @@ class CourseSeeder extends Seeder
         $courses = [
             [
                 'title' => 'Full Stack Web Development dengan Laravel 13 & Vue 3',
+                'slug' => 'full-stack-web-development-laravel-13-vue-3',
                 'instructor' => 'Sandhika Galih',
                 'duration' => '36 Jam (8 Minggu)',
                 'image' => 'course-laravel.svg',
@@ -26,6 +28,7 @@ class CourseSeeder extends Seeder
             ],
             [
                 'title' => 'Python untuk Data Science & Machine Learning',
+                'slug' => 'python-untuk-data-science-machine-learning',
                 'instructor' => 'Afif Efendi, M.Kom.',
                 'duration' => '28 Jam (6 Minggu)',
                 'image' => 'course-python.svg',
@@ -35,6 +38,7 @@ class CourseSeeder extends Seeder
             ],
             [
                 'title' => 'UI/UX Design Mastery dari Wireframe ke Prototype Interaktif',
+                'slug' => 'ui-ux-design-mastery-wireframe-prototype',
                 'instructor' => 'Sarah Amanda, S.Kom.',
                 'duration' => '20 Jam (4 Minggu)',
                 'image' => 'course-uiux.svg',
@@ -44,6 +48,7 @@ class CourseSeeder extends Seeder
             ],
             [
                 'title' => 'Flutter & Dart: Bangun Aplikasi Mobile iOS & Android',
+                'slug' => 'flutter-dart-aplikasi-mobile-ios-android',
                 'instructor' => 'Dimas Arya',
                 'duration' => '32 Jam (7 Minggu)',
                 'image' => 'course-flutter.svg',
@@ -53,6 +58,7 @@ class CourseSeeder extends Seeder
             ],
             [
                 'title' => 'DevOps & Containerization dengan Docker & CI/CD Pipeline',
+                'slug' => 'devops-docker-cicd-pipeline',
                 'instructor' => 'Rizky Pratama',
                 'duration' => '24 Jam (5 Minggu)',
                 'image' => 'course-devops.svg',
@@ -62,6 +68,7 @@ class CourseSeeder extends Seeder
             ],
             [
                 'title' => 'Cyber Security Fundamentals & Ethical Hacking Praktis',
+                'slug' => 'cyber-security-fundamentals-ethical-hacking',
                 'instructor' => 'Ahmad Fauzi, CEH',
                 'duration' => '26 Jam (6 Minggu)',
                 'image' => 'course-security.svg',
@@ -71,6 +78,7 @@ class CourseSeeder extends Seeder
             ],
             [
                 'title' => 'Database Design, Optimization & SQL Mastery (MySQL/PostgreSQL)',
+                'slug' => 'database-design-optimization-sql-mastery',
                 'instructor' => 'Budi Santoso, M.Kom.',
                 'duration' => '18 Jam (4 Minggu)',
                 'image' => 'course-sql.svg',
@@ -80,6 +88,7 @@ class CourseSeeder extends Seeder
             ],
             [
                 'title' => 'React.js & Next.js Modern Frontend Architecture',
+                'slug' => 'reactjs-nextjs-modern-frontend-architecture',
                 'instructor' => 'Nadia Utami',
                 'duration' => '30 Jam (6 Minggu)',
                 'image' => 'course-react.svg',
@@ -90,6 +99,9 @@ class CourseSeeder extends Seeder
         ];
 
         foreach ($courses as $course) {
+            if (empty($course['slug'])) {
+                $course['slug'] = Str::slug($course['title']);
+            }
             Course::create($course);
         }
     }

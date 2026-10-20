@@ -141,7 +141,7 @@
                                     {{ $rel->category }}
                                 </span>
                                 <h6 class="fw-bold text-dark mb-2 text-truncate-2">
-                                    <a href="{{ route('courses.show', $rel->id) }}" class="text-decoration-none text-dark">
+                                    <a href="{{ route('courses.show', $rel->slug) }}" class="text-decoration-none text-dark">
                                         {{ $rel->title }}
                                     </a>
                                 </h6>
@@ -150,7 +150,7 @@
                                 </div>
                                 <div class="mt-auto d-flex justify-content-between align-items-center pt-2 border-top">
                                     <span class="fw-bold text-primary small">{{ $rel->formatted_price }}</span>
-                                    <a href="{{ route('courses.show', $rel->id) }}" class="btn btn-sm btn-outline-primary">
+                                    <a href="{{ route('courses.show', $rel->slug) }}" class="btn btn-sm btn-outline-primary">
                                         Detail
                                     </a>
                                 </div>

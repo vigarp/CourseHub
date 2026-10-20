@@ -17,4 +17,4 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [CourseController::class, 'index'])->name('courses.index');
 
 // Halaman Detail Course
-Route::get('/courses/{id}', [CourseController::class, 'show'])->name('courses.show');
+Route::get('/courses/{slug}', [CourseController::class, 'show'])->name('courses.show');

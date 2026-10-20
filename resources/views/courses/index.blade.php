@@ -78,7 +78,7 @@
 
                             <!-- Judul Kursus -->
                             <h6 class="card-title fw-bold text-dark mb-2 text-truncate-2" style="min-height: 2.8rem; line-height: 1.4;">
-                                <a href="{{ route('courses.show', $course->id) }}" class="text-decoration-none text-dark hover-primary">
+                                <a href="{{ route('courses.show', $course->slug) }}" class="text-decoration-none text-dark hover-primary">
                                     {{ $course->title }}
                                 </a>
                             </h6>
@@ -101,7 +101,7 @@
                                     <small class="text-muted d-block" style="font-size: 0.7rem;">Harga Kursus</small>
                                     <span class="fw-bold text-primary fs-6">{{ $course->formatted_price }}</span>
                                 </div>
-                                <a href="{{ route('courses.show', $course->id) }}" class="btn btn-sm btn-primary">
+                                <a href="{{ route('courses.show', $course->slug) }}" class="btn btn-sm btn-primary">
                                     Detail <i class="bi bi-arrow-right"></i>
                                 </a>
                             </div>

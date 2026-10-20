@@ -26,18 +26,21 @@ class CourseController extends Controller
     }
 
     /**
-     * Display the specified course.
+     * Display the specified course by slug or id.
      */
-    public function show($id)
+    public function show(string $slug)
     {
-        $course = Course::findOrFail($id);
-        $relatedCourses = Course::where('id', '!=', $id)
+        $course = Course::where('slug', $slug)
+            ->orWhere('id', $slug)
+            ->firstOrFail();
+
+        $relatedCourses = Course::where('id', '!=', $course->id)
             ->where('category', $course->category)
             ->take(3)
             ->get();
 
         if ($relatedCourses->isEmpty()) {
-            $relatedCourses = Course::where('id', '!=', $id)->take(3)->get();
+            $relatedCourses = Course::where('id', '!=', $course->id)->take(3)->get();
         }
 
         return view('courses.show', compact('course', 'relatedCourses'));
