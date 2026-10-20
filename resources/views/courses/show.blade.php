@@ -88,7 +88,7 @@
 
         <!-- Kolom Kanan: Card Info Singkat & Pendaftaran -->
         <div class="col-lg-4">
-            <div class="card border-0 shadow-sm rounded-3 p-4 sticky-top bg-white" style="top: 80px;">
+            <div class="card border-0 shadow-sm rounded-3 p-4 bg-white" style="position: sticky; top: 85px; z-index: 10;">
                 <h5 class="fw-bold text-dark mb-3 border-bottom pb-2">Informasi Kursus</h5>
 
                 <div class="mb-4">

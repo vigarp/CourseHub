@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm sticky-top">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm sticky-top" style="z-index: 1030;">
     <div class="container">
         <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="{{ route('courses.index') }}">
             <span class="bg-primary text-white rounded px-2 py-1 fs-6">
