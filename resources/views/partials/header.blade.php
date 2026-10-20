@@ -22,12 +22,15 @@
                     </a>
                 </li>
             </ul>
-            <div class="d-flex align-items-center text-light small gap-2">
-                <span class="badge bg-secondary">UTS Rekayasa Web</span>
+            <div class="d-flex align-items-center gap-2 small">
+                <a href="javascript:void(0)" class="text-light text-opacity-75 text-decoration-none disabled" tabindex="-1" aria-disabled="true">
+                    Login
+                </a>
                 <span class="text-secondary">|</span>
-                <span class="text-light-50">03SIFE003</span>
+                <a href="javascript:void(0)" class="text-light text-opacity-75 text-decoration-none disabled" tabindex="-1" aria-disabled="true">
+                    Register
+                </a>
             </div>
         </div>
     </div>
 </nav>
-

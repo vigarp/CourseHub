@@ -35,16 +35,17 @@ class CourseTest extends TestCase
         ]);
     }
 
-    public function test_home_page_displays_student_identity_and_courses(): void
+    public function test_home_page_displays_platform_and_courses(): void
     {
         $response = $this->get('/');
 
         $response->assertStatus(200);
         $response->assertSee('Platform Belajar Online');
-        $response->assertSee('251011700088');
-        $response->assertSee('Vigar Rivai Putra');
+        $response->assertSee('CourseHub');
         $response->assertSee('Full Stack Web Development dengan Laravel 13');
         $response->assertSee('Sandhika Galih');
+        $response->assertSee('Login');
+        $response->assertSee('Register');
     }
 
     public function test_course_detail_page_displays_complete_information(): void
