@@ -14,8 +14,8 @@
                 <h1 class="display-5 fw-bold text-dark mb-3">
                     Platform Belajar Online
                 </h1>
-                <p class="text-secondary mb-0">
-                    Aplikasi web katalog kursus berbasis <strong>Laravel & Bootstrap</strong> untuk memenuhi Ujian Tengah Semester (UTS) Rekayasa Web.
+                <p class="text-secondary fs-6 mb-0">
+                    <strong>CourseHub</strong>, platform belajar ngoding dan teknologi terpercaya. Belajar terarah bersama para trainer yang sudah berpengalaman di bidangnya.
                 </p>
             </div>
         </div>
