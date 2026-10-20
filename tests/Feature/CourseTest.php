@@ -40,9 +40,9 @@ class CourseTest extends TestCase
         $response = $this->get('/');
 
         $response->assertStatus(200);
+        $response->assertSee('Platform Belajar Online');
         $response->assertSee('251011700088');
         $response->assertSee('Vigar Rivai Putra');
-        $response->assertSee('AFIF EFENDI');
         $response->assertSee('Full Stack Web Development dengan Laravel 13');
         $response->assertSee('Sandhika Galih');
     }

@@ -3,35 +3,17 @@
 @section('title', 'CourseHub - Platform Belajar Online')
 
 @section('content')
-<!-- Hero Section (Identitas UTS sesuai format soal) -->
+<!-- Hero Section -->
 <section class="hero-banner py-5 mb-4 text-center">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-8">
-                <!-- Logo Unpam -->
-                <div class="mb-3">
-                    <img src="{{ asset('assets/images/logo-unpam.svg') }}" alt="Logo Universitas Pamulang" style="width: 100px; height: 100px;">
-                </div>
-                
-                <p class="text-uppercase text-muted fw-bold mb-1 letter-spacing-1" style="letter-spacing: 2px;">
+                <p class="text-uppercase text-muted fw-bold mb-1" style="letter-spacing: 2px;">
                     Welcome To
                 </p>
                 <h1 class="display-5 fw-bold text-dark mb-3">
                     Platform Belajar Online
                 </h1>
-                
-                <!-- Box Identitas Mahasiswa (Persis layout referensi soal) -->
-                <div class="card border-0 shadow-sm mx-auto p-3 mb-4 bg-light" style="max-width: 420px;">
-                    <div class="card-body p-1">
-                        <div class="fw-bold text-dark fs-5 mb-1">251011700088</div>
-                        <div class="text-primary fw-semibold mb-1">Vigar Rivai Putra</div>
-                        <div class="text-muted small">Prodi Sistem Informasi (03SIFE003)</div>
-                        <div class="text-secondary small fw-bold mt-2 pt-2 border-top">
-                            DOSEN PENGAMPU: <span class="text-dark">AFIF EFENDI</span>
-                        </div>
-                    </div>
-                </div>
-
                 <p class="text-secondary mb-0">
                     Aplikasi web katalog kursus berbasis <strong>Laravel & Bootstrap</strong> untuk memenuhi Ujian Tengah Semester (UTS) Rekayasa Web.
                 </p>
